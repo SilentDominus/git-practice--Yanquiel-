@@ -5,7 +5,8 @@ class Gestor_De_Tareas:
         
     def agregarTarea(self,Tarea):
         self.listaT.append(Tarea)
-                
+    
+    
         
 class Tarea:
     def __init__(self, descripcion):
