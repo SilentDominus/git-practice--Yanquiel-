@@ -1,5 +1,5 @@
 import json
-from Lista_de_Tareas.core import *
+from core import *
 FILE_PATH = "datos.json"
 
 Gestor = Gestor_De_Tareas()

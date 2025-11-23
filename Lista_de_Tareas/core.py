@@ -53,6 +53,7 @@ class Tarea:
             "Descripcion": self.descripcion,
             "Estado": self.estado
         }
+        return diccionario
     
 
         
