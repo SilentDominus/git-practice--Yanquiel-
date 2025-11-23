@@ -25,7 +25,8 @@ while(flag):
     "2": lambda: gestor.verTareas(),
     "3": lambda: gestor.marcarCompletada(),
     "4": lambda: gestor.eliminaTarea(),
-    "4": lambda: guardarDatos()
+    "5": lambda: guardarDatos(),
+    "6": lambda: cargarDatos()
     }
 
     action = Opciones.get(eleccion,lambda: print(" "))

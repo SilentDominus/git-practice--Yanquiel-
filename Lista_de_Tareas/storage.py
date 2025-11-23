@@ -7,3 +7,6 @@ def guardarDatos():
     data = [T.convertirDiccionario() for T in Gestor.getLista()]
     with open(FILE_PATH, 'w') as file:
         json.dump(data, file)
+        
+def cargarDatos():
+    pass
