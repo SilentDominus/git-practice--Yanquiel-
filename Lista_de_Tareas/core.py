@@ -30,6 +30,9 @@ class Gestor_De_Tareas:
         else:
             self.listaT.pop(borrar-1)
             
+    def getLista(self):
+        return self.listaT
+            
     
 class Tarea:
     def __init__(self, descripcion):
@@ -44,6 +47,12 @@ class Tarea:
         
     def getdescripcion(self):
         return self.descripcion
+    
+    def convertirDiccionario(self):
+        diccionario = {
+            "Descripcion": self.descripcion,
+            "Estado": self.estado
+        }
     
 
         

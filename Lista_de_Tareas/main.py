@@ -1,4 +1,5 @@
 from core import * 
+from storage import *
 
 flag = True
 while(flag):
@@ -23,7 +24,8 @@ while(flag):
     "1": lambda: gestor.agregarTarea(),
     "2": lambda: gestor.verTareas(),
     "3": lambda: gestor.marcarCompletada(),
-    "4": lambda: gestor.eliminaTarea()
+    "4": lambda: gestor.eliminaTarea(),
+    "4": lambda: guardarDatos()
     }
 
     action = Opciones.get(eleccion,lambda: print(" "))
