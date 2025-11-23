@@ -1,0 +1,3 @@
+Este programa es un gestor de tareas que permite al usuario mediante consola agregar tareas, ver sus tareas, eliminar una tarea, marcarla com completada
+El programa tambien posee persistencia de datos, lo que permite guardar y cargar los datos en un json
+Esta construido de la forma mas limpia y clara que puede, con varios modulos y programacion orientada a objetos.
