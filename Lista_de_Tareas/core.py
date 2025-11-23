@@ -21,7 +21,7 @@ class Gestor_De_Tareas:
         if marcar > len(self.listaT) or marcar < 1:
             raise Exception("El numero esta fuera de rango")
         else:
-            self.listaT[marcar].setestado(True)
+            self.listaT[marcar-1].setestado(True)
         
     def eliminaTarea(self):
         borrar = int(input("Seleccione el numero de la tarea a borrar"))
