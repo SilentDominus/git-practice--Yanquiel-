@@ -15,7 +15,7 @@ while(flag):
     eleccion = input("Elija una opcion: ")
     
     if int(eleccion) < 1 or int(eleccion) > 7:
-        print("\n!!!!!!!FUERA DE RANGO!!!!!!")
+        print("\n!!!!!!! FUERA DE RANGO !!!!!!")
     elif eleccion == "7":
         flag = False
         
@@ -25,7 +25,8 @@ while(flag):
     "2": lambda: gestor.verTareas(),
     "3": lambda: gestor.marcarCompletada(),
     "4": lambda: gestor.eliminaTarea(),
-    "5": lambda: guardarDatos()
+    "5": lambda: guardarDatos(),
+    "6": lambda: cargarDatos()
     }
 
     action = Opciones.get(eleccion,lambda: print(" "))

@@ -10,11 +10,14 @@ class Gestor_De_Tareas:
         
     def verTareas(self):
         posicion = 1
-        print("\nLas tareas son: ")
-        for T in self.listaT:
-            print(f"Tarea {posicion}- descripcion: {T.getdescripcion()}")
-            print(f"         Estado: {'completado' if T.getestado() else 'No Completada'}")
-            posicion += 1
+        if len(self.listaT)==0:
+            print("\n!!!!!!!!! NO HAY TAREAS !!!!!!!!")
+        else:
+            print("\nLas tareas son: ")
+            for T in self.listaT:
+                print(f"Tarea {posicion}- descripcion: {T.getdescripcion()}")
+                print(f"         Estado: {'completado' if T.getestado() else 'No Completada'}")
+                posicion += 1
             
     def marcarCompletada(self):
         marcar = int(input("Diga el numero de la tarea completada: "))
@@ -32,12 +35,16 @@ class Gestor_De_Tareas:
             
     def getLista(self):
         return self.listaT
+    
+    def setLista(self, descripcion, estado):
+        self.listaT.append(Tarea(descripcion, estado))
+        
             
     
 class Tarea:
-    def __init__(self, descripcion):
+    def __init__(self, descripcion, estado = False):
         self.descripcion = descripcion
-        self.estado = False
+        self.estado = estado
         
     def getestado(self):
         return self.estado
