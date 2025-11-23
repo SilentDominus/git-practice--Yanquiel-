@@ -12,12 +12,13 @@ class Gestor_De_Tareas:
         posicion = 1
         print("\nLas tareas son: ")
         for T in self.listaT:
-            print(f"{posicion}-{T}")
+            print(f"Tarea {posicion}- descripcion: {T.getdescripcion()}")
+            print(f"         Estado: {'completado' if T.getestado() else 'No Completada'}")
             posicion += 1
             
     def marcarCompletada(self):
         marcar = int(input("Diga el numero de la tarea completada: "))
-        if marcar > range(self.listaT)-1 or marcar < range(self.listaT)-1:
+        if marcar > len(self.listaT) or marcar < 1:
             raise Exception("El numero esta fuera de rango")
         else:
             self.listaT[marcar].setestado(True)
@@ -40,6 +41,9 @@ class Tarea:
     
     def setestado(self, estado):
         self.estado = estado
+        
+    def getdescripcion(self):
+        return self.descripcion
         
 
         
