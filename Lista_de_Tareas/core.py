@@ -3,8 +3,10 @@ class Gestor_De_Tareas:
     def __init__(self):
         pass
         
-    def agregarTarea(self,Tarea):
-        self.listaT.append(Tarea)
+    def agregarTarea(self):
+        descripcion = input("Introduzca la tarea: ")
+        tarea = Tarea(descripcion)
+        self.listaT.append(tarea)
         
     def verTareas(self):
         posicion = 1

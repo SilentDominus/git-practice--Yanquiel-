@@ -1,4 +1,4 @@
-from Lista_de_Tareas import core
+from Lista_de_Tareas.core import * 
 
 
 print("--------------Gestor de tareas--------------")
